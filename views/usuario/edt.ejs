@@ -1,0 +1,33 @@
+<%-include('../cabecalho.ejs')%>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2</title>
+</head>
+<body>
+    Usuário
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/usuario/add">Adicionar</a>
+    <a href="/admin/usuario/lst">Listar</a>
+    <form method="post" enctype="multipart/form-data">
+        Id: <input type="text" name="id"
+        value="<%=Usuario._id%>" readonly><br>
+        Nome: <input type="text" name="nome"
+        placeholder="Digite seu nome"
+        value="<%=Usuario.nome%>" required><br>
+        Email: <input type="text" name="email"
+        placeholder="Digite seu email"
+        value="<%=Usuario.email%>" required><br>
+        Senha: <input type="password" name="senha"
+        placeholder="Digite sua senha"
+        value="<%=Usuario.senha%>" required><br>
+        Foto: <input type="file" name="foto"
+        accept="image/*" required><br>
+        <input type="submit" value="Salvar">
+    </form>    
+</body>
+</html>
+<%-include('../rodape.ejs')%>

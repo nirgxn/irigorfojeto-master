@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2</title>
+</head>
+<body>
+    Álbum
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/genero/add">Adicionar</a>
+    <a href="/admin/genero/lst">Listar</a>
+    <form method="post" enctype="multipart/form-data">
+        
+        Nome: <input type="text" name="nome"
+        placeholder="Digite o genero"
+        value="<%=genero.nome%>" required><br>
+        Autor: <input type="text" name="autor"
+        placeholder="Digite o nome do autor"
+        value="<%=genero.autor%>" required><br>
+    
+        </select><br>
+
+        <input type="submit" value="Salvar">
+    </form>    
+</body>
+</html>

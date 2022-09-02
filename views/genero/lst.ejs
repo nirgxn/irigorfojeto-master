@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2</title>
+</head>
+<body>
+    Álbum
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/genero/add">Adicionar</a>
+    <a href="/admin/genero/lst">Listar</a>
+    <form method="post">
+        <input type="text" class="pesquisa" name="pesquisa" placeholder="Digite o nome do álbum que deseja pesquisar.">
+        <input type="submit" value="Pesquisar">
+    </form>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Número de Faixas</th>
+            <th>Data de Lançamento</th>
+            <th>Artista</th>
+            <th>Capa do álbum</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+        </tr>
+        <% Albuns.forEach(function (album) { %>
+        <tr>
+            <td><%=album._id%></td>
+            <td><%=album.nome%></td>
+            <td><%=album.numerofaixa%></td>
+            <td><%=album.lancamento%></td>
+            <td><%=album.artista.nome%></td>
+            <td><img src="/fotos/<%=album.foto%>" alt="Capa do álbum"></td>
+            <td><a href="/admin/album/edt/<%=album._id%>">Editar</a></td>
+            <td><a href="/admin/album/deleta/<%=album._id%>">Deletar</a></td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

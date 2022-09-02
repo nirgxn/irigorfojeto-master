@@ -1,0 +1,16 @@
+<%-include('../cabecalho.ejs')%>
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/usuario/add">Adicionar</a>
+    <a href="/admin/usuario/lst">Listar</a>
+    <form method="post" enctype="multipart/form-data">
+        Titulo: <input type="text" name="titulo"
+        placeholder="Digite seu nome" required><br>
+        Autor: <input type="text" name="email"
+        placeholder="Digite seu email" required><br>
+        Genero: <input type="text" name="senha"
+        placeholder="Digite sua senha" required><br>
+        Foto: <input type="file" name="foto"
+        accept="image/*" required><br>
+        <input type="submit" value="Salvar">
+    </form>    
+<%-include('../rodape.ejs')%>

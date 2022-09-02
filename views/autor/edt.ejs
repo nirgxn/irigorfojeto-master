@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2</title>
+</head>
+<body>
+    Artista
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/artista/add">Adicionar</a>
+    <a href="/admin/artista/lst">Listar</a>
+    <form method="post" enctype="multipart/form-data">
+        Id: <input type="text" name="id"
+        value="<%=Autor._id%>" readonly><br>
+        Nome: <input type="text" name="autor"
+        placeholder="Digite o nome do autor"
+        value="<%=Artista.nome%>" required><br>
+        Data de Nascimento: <input type="date" name="nascimento"
+        placeholder="Digite a data de nascimento"
+        value="<%=Autor.nascimento%>" required><br>
+        Foto: <input type="file" name="foto"
+        accept="image/*" required><br>
+        <input type="submit" value="Salvar">
+    </form>    
+</body>
+</html>

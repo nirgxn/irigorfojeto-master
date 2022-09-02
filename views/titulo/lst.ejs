@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2</title>
+</head>
+<body>
+    Single
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/single/add">Adicionar</a>
+    <a href="/admin/single/lst">Listar</a>
+    <form method="post">
+        <input type="text" class="pesquisa" name="pesquisa" placeholder="Digite o nome do texto que deseja pesquisar.">
+        <input type="submit" value="Pesquisar">
+    </form>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Autor</th>
+            <th>Data de Publicação</th>
+            <th>Genero</th>
+            <th>Titulo</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+        </tr>
+        <% titulos.forEach(function (titulo) { %>
+        <tr>
+            <td><%=titulo._id%></td>
+            <td><%=titulo.nome%></td>
+            <td><%=titulo.datapub%></td>
+            <td>
+                <% titulo.autor.forEach(function (autor) { %>
+                <%=autor.nome%><br>
+                <% }) %>
+            </td>
+            <td><img src="/fotos/<%=titulo.foto%>" alt="Capa do álbum"></td>
+            <td><a href="/admin/titulo/edt/<%=titulo._id%>">Editar</a></td>
+            <td><a href="/admin/titulo/deleta/<%=titulo._id%>">Deletar</a></td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

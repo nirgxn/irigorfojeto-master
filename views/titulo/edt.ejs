@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2</title>
+</head>
+<body>
+    Single
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/single/add">Adicionar</a>
+    <a href="/admin/single/lst">Listar</a>
+    <form method="post" enctype="multipart/form-data">
+        Id: <input type="text" name="id"
+        value="<%=Single._id%>" readonly><br>
+        Nome: <input type="text" name="nome"
+        placeholder="Digite o nome do single"
+        value="<%=Single.nome%>" required><br>
+        Data de Lançamento: <input type="date" name="lancamento"
+        placeholder="Digite a data de lançamento do single"
+        value="<%=Single.lancamento%>" required><br>
+        Capa do Single: <input type="file" name="foto"
+        accept="image/*" required><br>
+        <input type="submit" value="Salvar">
+    </form>    
+</body>
+</html>

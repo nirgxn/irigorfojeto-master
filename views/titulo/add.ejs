@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irigorfojeto</title>
+</head>
+<body>
+    Single
+    <a href="/admin">Página Inicial</a>
+    <a href="/admin/single/add">Adicionar</a>
+    <a href="/admin/single/lst">Listar</a>
+    <form method="post" enctype="multipart/form-data">
+        Titulo: <input type="text" name="titulo"
+        placeholder="Digite o titulo" required><br>
+        Data de Publicação: <input type="date" name="datapub"
+        placeholder="Digite a data de publicação do titulo" required><br>
+        Foto: <input type="file" name="foto"
+        accept="image/*" required><br>
+        Autor: <select name="autores" multiple="" required>
+            <% Autores.forEach(function (autor) { %>
+            <option value="<%=autor._id%>"><%=autor.nome%></option>
+            <% }) %>
+        </select><br>
+        <input type="submit" value="Salvar">
+    </form>    
+</body>
+</html>
